@@ -8,7 +8,7 @@
   get_url:
     url: '{{ solr_url }}'
     dest: '/tmp/solr-{{ solr_version }}.tgz'
-  tags: java
+  tags: solr
 
 - name: Extract Solr 6.4.2 archive to /tmp
   unarchive:
@@ -28,3 +28,4 @@
 #    -p {{ solr_port }}
   args:  
     creates: '{{ solr_path }}/bin/solr'
+  tags: solr
