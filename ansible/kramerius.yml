@@ -1,0 +1,4 @@
+- name: SOLR 6 will be installed
+  hosts: solr
+  roles:
+  - solr
