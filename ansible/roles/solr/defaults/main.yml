@@ -1,3 +1,6 @@
 ---
 oracle_java_url: http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jre-8u121-linux-x64.rpm
 oracle_java_rpm: jre-8u121-linux-x64.rpm
+solr_url: https://archive.apache.org/dist/lucene/solr/6.4.2/solr-6.4.2.tgz
+solr_version: 6.4.2
+solr_path: '/opt/solr-{{ solr_version }}'

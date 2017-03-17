@@ -11,3 +11,33 @@
     name: '/tmp/{{ oracle_java_rpm }}'
     state: present
   tags: java
+
+- name: Solr digs lsof
+  yum:
+    name: lsof
+    state: present
+
+- name: get Solr {{ solr_version }}
+  get_url:
+    url: '{{ solr_url }}'
+    dest: '/tmp/solr-{{ solr_version }}.tgz'
+  tags: java
+
+- name: Extract Solr 6.4.2 archive to /tmp
+  unarchive:
+    src: '/tmp/solr-{{ solr_version }}.tgz'
+    dest: /tmp/
+    remote_src: True
+  tags: solr
+  
+- name: 'Solr is installed and runnning, defaulting to -i: /opt,  -d: /var/solr, -p: 8983, -u: solr, -s: solr.'
+  shell: >
+    /tmp/solr-{{ solr_version }}/bin/install_solr_service.sh
+    /tmp/solr-{{ solr_version }}.tgz
+#    -i {{ solr_install_dir }}
+#    -d {{ solr_home }}
+#    -u {{ solr_user }}
+#    -s {{ solr_service_name }}
+#    -p {{ solr_port }}
+  args:  
+    creates: '{{ solr_path }}/bin/solr'
