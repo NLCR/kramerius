@@ -3,4 +3,14 @@
   hosts:
   - all
   roles: 
-  - { role: firewall, open_service: [ http, https ], open_port: [ 8080/tcp ] }
+  - { role: firewall }
+
+- name: Firewalling Solr
+  hosts: solr
+  roles:
+  - { role: firewall, open_port: [ 8983/tcp ] }
+
+- name: Firewalling Fedora
+  hosts: fedora
+  roles:
+  - { role: firewall, open_port: [ 8080/tcp ] }
