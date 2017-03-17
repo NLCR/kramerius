@@ -1,5 +1,6 @@
 ---
-- hosts:
+- name: Firewalling machines
+  hosts:
   - all
 
   tasks:
