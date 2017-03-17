@@ -13,4 +13,4 @@
 - name: Firewalling Fedora
   hosts: fedora
   roles:
-  - { role: firewall, open_port: [ 8080/tcp ] }
+  - { role: firewall, open_port: [ 18080/tcp ] }

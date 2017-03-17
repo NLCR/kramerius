@@ -2,3 +2,8 @@
   hosts: solr
   roles:
   - solr
+
+- name: Fedora 4 will be installed
+  hosts: fedora
+  roles:
+  - fedora
