@@ -1,6 +1,7 @@
 # Kramerius - Fedora 4 + SOLR 6
 
 ## Popis aplikace
+Téměr defaultní instalace bez fancy features. Instalace: https://github.com/ceskaexpedice/kramerius/wiki/POC_install
 
 ### Účel aplikace
 Testování Kraméria
@@ -8,7 +9,8 @@ Testování Kraméria
 ### Popsání komponent
 
 OS: Centos 7
-
+Fedora: 4.7.1
+Solr: 6.4.2
 
 ## Vagrant - lokální testovací/vývoje prostředí
 
