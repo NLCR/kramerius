@@ -4,9 +4,13 @@
     url: '{{ fedora_url }}'
     dest: '{{ fedora_path }}'
     checksum: '{{ fedora_checksum }}'
-    tags: fedora
+  tags: fedora
 
 - name: start Fedora {{ fedora_vetsion }}
   shell: >
-    java -jar /opt/{{ fedora_path }}
-    -Djetty.port=18080
+    screen
+    -d
+    -m
+    java -jar {{ fedora_path }}
+    --port 18080
+  tags: fedora
