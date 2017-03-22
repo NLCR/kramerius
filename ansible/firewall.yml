@@ -3,14 +3,14 @@
   hosts:
   - all
   roles: 
-  - { role: firewall }
+  - { role: NLCR.firewall }
 
 - name: Firewalling Solr
   hosts: solr
   roles:
-  - { role: firewall, open_port: [ 8983/tcp ] }
+  - { role: NLCR.firewall, open_port: [ 8983/tcp ] }
 
 - name: Firewalling Fedora
   hosts: fedora
   roles:
-  - { role: firewall, open_port: [ 18080/tcp ] }
+  - { role: NLCR.firewall, open_port: [ 18080/tcp ] }
