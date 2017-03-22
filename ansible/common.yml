@@ -1,4 +1,4 @@
 - name: Common configuration for all servers
   hosts: all
   roles:
-  - common
+  - NLCR.common
