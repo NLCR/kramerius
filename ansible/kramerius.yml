@@ -1,7 +1,7 @@
 - name: SOLR 6 will be installed
   hosts: solr
   roles:
-  - solr
+  - NLCR.solr
 
 - name: Fedora 4 will be installed
   hosts: fedora
