@@ -6,4 +6,4 @@
 - name: Fedora 4 will be installed
   hosts: fedora
   roles:
-  - fedora
+  - NLCR.fedora
